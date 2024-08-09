@@ -1,4 +1,5 @@
 using CourseManagementSystem.Api.Data;
+using CourseManagementSystem.Api.Data.Services;
 using CourseManagementSystem.Api.Repositories;
 using CourseManagementSystem.Api.Repositories.Interfaces;
 using CourseManagementSystem.Api.Services;
@@ -12,7 +13,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(); builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("Course"));
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddSwaggerGen(); builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 builder.Services.AddScoped<ICourseService, CourseService>();
@@ -25,6 +29,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+DatabaseManagementService.MigrationInitialization(app);
 
 app.UseHttpsRedirection();
 
