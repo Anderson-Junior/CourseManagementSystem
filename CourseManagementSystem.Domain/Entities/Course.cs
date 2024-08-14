@@ -1,4 +1,4 @@
-﻿namespace CourseManagementSystem.Api.Entities
+﻿namespace CourseManagementSystem.Domain.Entities
 {
     public class Course
     {

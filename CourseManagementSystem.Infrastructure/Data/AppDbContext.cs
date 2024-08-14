@@ -1,7 +1,7 @@
-﻿using CourseManagementSystem.Api.Entities;
+﻿using CourseManagementSystem.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace CourseManagementSystem.Api.Data
+namespace CourseManagementSystem.Infrastructure.Data
 {
     public class AppDbContext : DbContext
     {

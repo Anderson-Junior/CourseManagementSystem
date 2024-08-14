@@ -1,5 +1,5 @@
 ﻿using CourseManagementSystem.Api.Controllers;
-using CourseManagementSystem.Api.Entities;
+using CourseManagementSystem.Domain.Entities;
 using CourseManagementSystem.Api.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Moq;

@@ -1,8 +1,8 @@
-﻿using CourseManagementSystem.Api.Entities;
-using CourseManagementSystem.Api.Repositories.Interfaces;
-using CourseManagementSystem.Api.Services.Interfaces;
+﻿using CourseManagementSystem.Application.Interfaces;
+using CourseManagementSystem.Domain.Entities;
+using CourseManagementSystem.Domain.Interfaces;
 
-namespace CourseManagementSystem.Api.Services
+namespace CourseManagementSystem.Application.Services
 {
     public class CourseService : ICourseService
     {

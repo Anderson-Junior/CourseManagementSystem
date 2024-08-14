@@ -1,9 +1,7 @@
-using CourseManagementSystem.Api.Data;
-using CourseManagementSystem.Api.Data.Services;
-using CourseManagementSystem.Api.Repositories;
-using CourseManagementSystem.Api.Repositories.Interfaces;
-using CourseManagementSystem.Api.Services;
-using CourseManagementSystem.Api.Services.Interfaces;
+using CourseManagementSystem.Application.Interfaces;
+using CourseManagementSystem.Application.Services;
+using CourseManagementSystem.Domain.Interfaces;
+using CourseManagementSystem.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,7 +14,8 @@ builder.Services.AddEndpointsApiExplorer();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddSwaggerGen(); builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(connectionString));
+builder.Services.AddSwaggerGen(); 
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 builder.Services.AddScoped<ICourseService, CourseService>();
@@ -29,8 +28,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-DatabaseManagementService.MigrationInitialization(app);
 
 app.UseHttpsRedirection();
 

@@ -1,5 +1,5 @@
-﻿using CourseManagementSystem.Api.Entities;
-using CourseManagementSystem.Api.Services.Interfaces;
+﻿using CourseManagementSystem.Application.Interfaces;
+using CourseManagementSystem.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 

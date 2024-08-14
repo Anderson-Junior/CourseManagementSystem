@@ -1,4 +1,4 @@
-﻿using CourseManagementSystem.Api.Entities;
+﻿using CourseManagementSystem.Domain.Entities;
 using CourseManagementSystem.Api.Repositories.Interfaces;
 using CourseManagementSystem.Api.Services;
 using Moq;

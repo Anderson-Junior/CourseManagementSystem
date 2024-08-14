@@ -1,9 +1,8 @@
-﻿using CourseManagementSystem.Api.Data;
-using CourseManagementSystem.Api.Entities;
-using CourseManagementSystem.Api.Repositories.Interfaces;
+﻿using CourseManagementSystem.Domain.Entities;
+using CourseManagementSystem.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace CourseManagementSystem.Api.Repositories
+namespace CourseManagementSystem.Infrastructure.Data
 {
     public class CourseRepository : ICourseRepository
     {
