@@ -1,5 +1,5 @@
 ﻿using CourseManagementSystem.Application.Interfaces;
-using CourseManagementSystem.Domain.Entities;
+using CourseManagementSystem.Shared.Dtos.Course;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -36,7 +36,7 @@ namespace CourseManagementSystem.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostCourseAsync(Course course)
+        public async Task<IActionResult> PostCourseAsync(CreateCourseDto course)
         {
             try
             {

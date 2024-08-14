@@ -16,8 +16,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CourseManagementSystem.Application\CourseManagementSystem.Application.csproj" />
-    <ProjectReference Include="..\CourseManagementSystem.Domain\CourseManagementSystem.Domain.csproj" />
     <ProjectReference Include="..\CourseManagementSystem.Infrastructure\CourseManagementSystem.Infrastructure.csproj" />
+    <ProjectReference Include="..\CourseManagementSystem.Shared\CourseManagementSystem.Shared.csproj" />
   </ItemGroup>
 
 </Project>
